@@ -7,7 +7,7 @@ This is a small and simple [Firebase][firebase]-powered, AngularJS application
 that helps an engineering team coordinate on a deployment to production that 
 requires some degree of manual checking and confirmation.
 
-*Run the application* (coming soon)
+**[Run the Git Deployment Checklist application](https://bennadel.github.io/Git-Commit-Checklist/)**
 
 The application takes a list of git commits, like:
 
