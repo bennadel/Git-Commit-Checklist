@@ -1,0 +1,124 @@
+
+<table border="1">
+	<colgroup>
+		<col />
+	</colgroup>
+	<colgroup width="210">
+		<col />
+		<col />
+	</colgroup>
+	<colgroup width="210">
+		<col />
+		<col />
+	</colgroup>
+	<thead>
+		<tr class="primary">
+			<th class="commits">
+				Feature Checklist
+			</th>
+			<th colspan="2" class="environment">
+				<span class="label {{ vm.staging }}">
+					Staging
+				</span>
+			</th>
+			<th colspan="2" class="environment">
+				<span class="label {{ vm.production }}">
+					Production
+
+					<img src="./app/checklist/ship-it.svg" />
+				</span>
+			</th>
+		</tr>
+		<tr class="secondary">
+			<th class="commits">
+				Commits
+
+				<input type="text" ng-model="vm.form.authorFilter" placeholder="Filter..." class="filter" />
+			</th>
+			<th>
+				Testing
+			</th>
+			<th>
+				Results
+			</th>
+			<th>
+				Testing
+			</th>
+			<th>
+				Results
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="commit in vm.commits | filter:{ author: vm.form.authorFilter } track by commit.hash">
+			<td title="{{ :: commit.author }} - {{ :: commit.subject }}" class="commit">
+				<span class="hash">
+					{{ :: commit.hash }}
+				</span>
+				<span class="notes">
+					<span class="author">[{{ :: commit.author }}]</span> 
+					<span class="subject">{{ :: commit.subject }}</span>
+				</span>
+			</td>
+			<td class="toggle">
+				<a 
+					ng-click="vm.toggleTestingInStaging( commit )"
+					class="testing {{ commit.staging.testing }}"
+					ng-switch="commit.staging.testing">
+
+					<span ng-switch-when="inactive">Start</span>
+					<span ng-switch-when="active">Testing</span>
+
+				</a>
+			</td>
+			<td class="toggle">
+				<a
+					ng-click="vm.toggleStatusInStaging( commit )"
+					class="status {{ commit.staging.status }}"
+					ng-switch="commit.staging.status">
+					
+					<span ng-switch-when="pending">Report</span>
+					<span ng-switch-when="pass">Pass</span>
+					<span ng-switch-when="fail">Fail</span>
+
+				</a>
+			</td>
+			<td class="toggle">
+				<a 
+					ng-click="vm.toggleTestingInProduction( commit )"
+					class="testing {{ commit.production.testing }}"
+					ng-switch="commit.production.testing">
+
+					<span ng-switch-when="inactive">Start</span>
+					<span ng-switch-when="active">Testing</span>
+
+				</a>
+			</td>
+			<td class="toggle">
+				<a
+					ng-click="vm.toggleStatusInProduction( commit )"
+					class="status {{ commit.production.status }}"
+					ng-switch="commit.production.status">
+					
+					<span ng-switch-when="pending">Report</span>
+					<span ng-switch-when="pass">Pass</span>
+					<span ng-switch-when="fail">Fail</span>
+
+				</a>
+			</td>
+		</tr>
+
+
+		<tr ng-if="! vm.commits.length ">
+			<td colspan="5" class="no-data">
+
+				Waiting for data to sync....
+
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="new-deploy">
+	<a href="#/">Start a new deployment</a>
+</p>

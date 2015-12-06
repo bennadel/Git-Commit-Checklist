@@ -1,0 +1,22 @@
+
+<h3>
+	Commit Log
+</h3>
+
+<div class="command">
+	git log develop..master --pretty=format:"%H [%an] %s" --no-merges --date-order
+</div>
+
+<form ng-submit="vm.processForm()">
+	
+	<textarea 
+		ng-model="vm.form.commitLog" 
+		ng-dblclick="vm.loadSampleData()"
+		placeholder="Copy &amp; paste your commit log here, like a boss! .... (double-click for sample data)">
+	</textarea>
+
+	<button class="submit">
+		Show Checklist
+	</button>
+
+</form>

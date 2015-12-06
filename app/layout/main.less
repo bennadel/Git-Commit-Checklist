@@ -1,0 +1,49 @@
+header {
+	margin: 30px 0px 30px 0px ;
+	text-align: center ;
+
+	h1 {
+		font-size: 60px ;
+		font-weight: 700 ;
+		line-height: 80px ;
+		margin: 0px 0px 0px 0px ;
+	}
+
+	div.creator {
+		color: #CCCCCC ;
+		font-size: 20px ;
+		line-height: 25px ;
+
+		a {
+			color: inherit ;
+			position: relative ;
+			text-decoration: none ;
+
+			&:after {
+				background-color: #F2C500 ;
+				border-radius: 2px 2px 2px 2px ;
+				color: #262626 ;
+				content: "Holy schnikes!" ;
+				display: none ;
+				font-size: 14px ;
+				font-weight: 600 ;
+				left: 112% ;
+				line-height: 21px ;
+				padding: 4px 10px 5px 10px ;
+				position: absolute ;
+				text-shadow: 1px 1px 1px #FFFFFF ;
+				top: -1px ;
+				white-space: nowrap ;
+			}
+
+			&:hover {
+				color: #333333 ;
+				text-decoration: underline ;
+
+				&:after {
+					display: block ;
+				}
+			}
+		}
+	}
+} // END: header.

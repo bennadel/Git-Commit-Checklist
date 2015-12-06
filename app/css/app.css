@@ -1,0 +1,247 @@
+body {
+  color: #333333 ;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px ;
+  font-weight: 300 ;
+  line-height: 23px ;
+  margin: 20px 20px 20px 20px ;
+  padding: 0px 0px 0px 0px ;
+}
+gdc-checklist {
+  display: block ;
+  margin: 100px auto 100px auto ;
+  max-width: 1500px ;
+}
+gdc-checklist table {
+  background-color: #FFFFFF ;
+  border-collapse: collapse ;
+  border: 1px solid #CCCCCC ;
+  border-width: 1px 0px 0px 1px ;
+  width: 100% ;
+}
+gdc-checklist th,
+gdc-checklist td {
+  border: 1px solid #CCCCCC ;
+  border-width: 0px 1px 1px 0px ;
+}
+gdc-checklist thead tr.primary th {
+  font-size: 40px ;
+  font-weight: 300 ;
+  line-height: 45px ;
+  text-align: center ;
+  white-space: nowrap ;
+}
+gdc-checklist thead tr.primary th.commits {
+  padding: 14px 16px 16px 16px ;
+  text-align: left ;
+}
+gdc-checklist thead tr.primary th.environment {
+  padding: 4px 4px 4px 4px ;
+}
+gdc-checklist thead tr.primary span.label {
+  display: block ;
+  padding: 10px 10px 12px 10px ;
+  position: relative ;
+}
+gdc-checklist thead tr.primary span.label img {
+  display: none ;
+  margin-left: -10px;
+  left: 50% ;
+  position: absolute ;
+  top: -80px;
+}
+gdc-checklist thead tr.primary span.label.pass {
+  background-color: #ADDF46;
+  color: #FFFFFF ;
+  font-weight: 400 ;
+}
+gdc-checklist thead tr.primary span.label.pass img {
+  display: block ;
+}
+gdc-checklist thead tr.primary span.label.fail {
+  background-color: #DF5E61;
+  color: #FFFFFF ;
+  font-weight: 400 ;
+}
+gdc-checklist thead tr.secondary th {
+  font-size: 22px ;
+  font-weight: 400 ;
+  line-height: 27px ;
+  padding: 13px 16px 13px 16px ;
+  text-align: center ;
+}
+gdc-checklist thead tr.secondary th.commits {
+  position: relative ;
+  text-align: left ;
+}
+gdc-checklist thead tr.secondary th.commits input {
+  border: 1px solid #CCCCCC ;
+  border-width: 0px 0px 1px 0px ;
+  font-family: inherit ;
+  font-size: 16px ;
+  font-weight: 300 ;
+  left: 130px ;
+  position: absolute ;
+  top: 15px ;
+  width: 150px ;
+}
+gdc-checklist tbody td.commit {
+  padding: 13px 16px 13px 16px ;
+}
+gdc-checklist tbody td.commit span.hash {
+  display: block ;
+  font-weight: 600 ;
+  margin: 0px 0px 3px 0px ;
+}
+gdc-checklist tbody td.commit span.notes {
+  color: #999999 ;
+  display: block ;
+}
+gdc-checklist tbody td.commit span.author {
+  color: #888888 ;
+}
+gdc-checklist tbody td.toggle {
+  position: relative ;
+}
+gdc-checklist tbody td.toggle a {
+  background-color: #F5F5F5 ;
+  bottom: 4px ;
+  color: #AAAAAA ;
+  cursor: pointer ;
+  left: 4px ;
+  line-height: 67px ;
+  position: absolute ;
+  right: 4px ;
+  text-align: center ;
+  text-decoration: none ;
+  top: 4px ;
+  user-select: none ;
+  -moz-user-select: none ;
+  -webkit-user-select: none ;
+}
+gdc-checklist tbody td.toggle a.inactive:hover,
+gdc-checklist tbody td.toggle a.pending:hover {
+  color: #333333 ;
+  text-decoration: underline ;
+}
+gdc-checklist tbody td.toggle a.testing.active {
+  background-color: #E0E0E0 ;
+  color: #333333 ;
+  font-weight: 400 ;
+}
+gdc-checklist tbody td.toggle a.status.pass {
+  background-color: #ADDF46;
+  color: #FFFFFF ;
+  font-weight: 600 ;
+}
+gdc-checklist tbody td.toggle a.status.fail {
+  background-color: #DF5E61;
+  color: #FFFFFF ;
+  font-weight: 600 ;
+}
+gdc-checklist tbody td.no-data {
+  color: #CCCCCC ;
+  font-size: 30px ;
+  line-height: 35px ;
+  padding: 100px 0px 100px 0px ;
+  text-align: center ;
+}
+gdc-checklist p.new-deploy {
+  margin: 50px 0px 0px 0px ;
+  text-align: center ;
+}
+gdc-checklist p.new-deploy a {
+  color: #999999 ;
+}
+gdc-intake {
+  display: block ;
+  margin: 100px auto 100px auto ;
+  max-width: 1500px ;
+}
+gdc-intake h3 {
+  font-size: 30px ;
+  font-weight: 600 ;
+  line-height: 35px ;
+  margin: 16px 0px 16px 0px ;
+  text-align: center ;
+}
+gdc-intake div.command {
+  color: #AAAAAA ;
+  font-size: 20px ;
+  line-height: 25px ;
+  margin: 16px 0px 26px 0px ;
+  text-align: center ;
+}
+gdc-intake form {
+  margin: 0px 0px 0px 0px ;
+}
+gdc-intake textarea {
+  border: 2px solid #CCCCCC ;
+  box-sizing: border-box;
+  display: block ;
+  font-family: inherit ;
+  font-size: 18px ;
+  height: 200px ;
+  line-height: 28px ;
+  margin: 16px 0px 16px 0px ;
+  padding: 15px 15px 15px 15px ;
+  width: 100% ;
+}
+gdc-intake button {
+  background-color: #F5F5F5 ;
+  border-radius: 4px 4px 4px 4px ;
+  border-width: 0px 0px 0px 0px ;
+  cursor: pointer ;
+  font-size: 30px ;
+  line-height: 35px ;
+  padding: 15px 0px 15px 0px ;
+  width: 100% ;
+}
+gdc-intake button:hover {
+  background-color: #ADDF46 ;
+  color: #FFFFFF ;
+  font-weight: 600 ;
+}
+header {
+  margin: 30px 0px 30px 0px ;
+  text-align: center ;
+}
+header h1 {
+  font-size: 60px ;
+  font-weight: 700 ;
+  line-height: 80px ;
+  margin: 0px 0px 0px 0px ;
+}
+header div.creator {
+  color: #CCCCCC ;
+  font-size: 20px ;
+  line-height: 25px ;
+}
+header div.creator a {
+  color: inherit ;
+  position: relative ;
+  text-decoration: none ;
+}
+header div.creator a:after {
+  background-color: #F2C500 ;
+  border-radius: 2px 2px 2px 2px ;
+  color: #262626 ;
+  content: "Holy schnikes!";
+  display: none ;
+  font-size: 14px ;
+  font-weight: 600 ;
+  left: 112% ;
+  line-height: 21px ;
+  padding: 4px 10px 5px 10px ;
+  position: absolute ;
+  text-shadow: 1px 1px 1px #FFFFFF ;
+  top: -1px;
+  white-space: nowrap ;
+}
+header div.creator a:hover {
+  color: #333333 ;
+  text-decoration: underline ;
+}
+header div.creator a:hover:after {
+  display: block ;
+}

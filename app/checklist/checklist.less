@@ -1,0 +1,186 @@
+gdc-checklist {
+	display: block ;
+	margin: 100px auto 100px auto ;
+	max-width: 1500px ;
+
+	table {
+		background-color: #FFFFFF ;
+		border-collapse: collapse ;
+		border: 1px solid #CCCCCC ;
+		border-width: 1px 0px 0px 1px ;
+		width: 100% ;
+	}
+
+	th, 
+	td {
+		border: 1px solid #CCCCCC ;
+		border-width: 0px 1px 1px 0px ;
+	}
+
+	thead {
+		tr.primary {
+			th {
+				font-size: 40px ;
+				font-weight: 300 ;
+				line-height: 45px ;
+				text-align: center ;
+				white-space: nowrap ;
+
+				&.commits {
+					padding: 14px 16px 16px 16px ;
+					text-align: left ;
+				}
+
+				&.environment {
+					padding: 4px 4px 4px 4px ;
+				}
+			}
+
+			span.label {
+				display: block ;
+				padding: 10px 10px 12px 10px ;
+				position: relative ;
+
+				img {
+					display: none ;
+					margin-left: -10px ;
+					left: 50% ;
+					position: absolute ;
+					top: -80px ;
+				}
+
+				&.pass {
+					background-color: @pass-color ;
+					color: #FFFFFF ;
+					font-weight: 400 ;
+
+					img {
+						display: block ;
+					}
+				}
+
+				&.fail {
+					background-color: @fail-color ;
+					color: #FFFFFF ;
+					font-weight: 400 ;
+				}
+			}
+		}
+
+		tr.secondary {
+			th {
+				font-size: 22px ;
+				font-weight: 400 ;
+				line-height: 27px ;
+				padding: 13px 16px 13px 16px ;
+				text-align: center ;
+
+				&.commits {
+					position: relative ;
+					text-align: left ;
+
+					input {
+						border: 1px solid #CCCCCC ;
+						border-width: 0px 0px 1px 0px ;
+						font-family: inherit ;
+						font-size: 16px ;
+						font-weight: 300 ;
+						left: 130px ;
+						position: absolute ;
+						top: 15px ;
+						width: 150px ;
+					}
+				}
+			}
+		}
+	} // END: thead.
+
+	tbody {
+		td.commit {
+			padding: 13px 16px 13px 16px ;
+
+			span.hash {
+				display: block ;
+				font-weight: 600 ;
+				margin: 0px 0px 3px 0px ;
+			}
+
+			span.notes {
+				color: #999999 ;
+				display: block ;
+			}
+
+			span.author {
+				color: #888888 ;
+			}
+
+			span.subject {}
+		}
+
+		td.toggle {
+			position: relative ;
+
+			a {
+				background-color: #F5F5F5 ;
+				bottom: 4px ;
+				color: #AAAAAA ;
+				cursor: pointer ;
+				left: 4px ;
+				line-height: 67px ;
+				position: absolute ;
+				right: 4px ;
+				text-align: center ;
+				text-decoration: none ;
+				top: 4px ;
+				user-select: none ;
+					-moz-user-select: none ;
+					-webkit-user-select: none ;
+
+				&.inactive:hover,
+				&.pending:hover {
+					color: #333333 ;
+					text-decoration: underline ;
+				}
+
+				&.testing {
+					&.active {
+						background-color: #E0E0E0 ;
+						color: #333333 ;
+						font-weight: 400 ;
+					}
+				}
+
+				&.status {
+					&.pass {
+						background-color: @pass-color ;
+						color: #FFFFFF ;
+						font-weight: 600 ;
+					}
+
+					&.fail {
+						background-color: @fail-color ;
+						color: #FFFFFF ;
+						font-weight: 600 ;
+					}
+				}
+			}
+		}
+
+		td.no-data {
+			color: #CCCCCC ;
+			font-size: 30px ;
+			line-height: 35px ;
+			padding: 100px 0px 100px 0px ;
+			text-align: center ;
+		}
+	} // END: tbody.
+
+	p.new-deploy {
+		margin: 50px 0px 0px 0px ;
+		text-align: center ;
+
+		a {
+			color: #999999 ;
+		}
+	}
+} // END: gdc-checklist.

@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="Checklist">
+<head>
+	<meta charset="utf-8" />
+
+	<title>
+		Git Deployment Checklist by Ben Nadel
+	</title>
+
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"></link>
+	<link rel="stylesheet" type="text/css" href="./app/css/app.css"></link>
+</head>
+<body ng-controller="MainLayoutController as vm" ng-switch="vm.subview">
+
+	<header>
+		
+		<h1>
+			Git Deployment Checklist
+		</h1>
+
+		<div class="creator">
+			by <a href="http://www.bennadel.com" target="_blank">Ben Nadel</a>
+		</div>
+
+	</header>
+
+	<!-- Render the top-level component. -->	
+	<gdc-intake ng-switch-when="intake"></gdc-intake>
+	<gdc-checklist ng-switch-when="checklist"></gdc-checklist>
+
+
+	<!-- **************************************************************************** -->
+	<!-- **************************************************************************** -->
+
+
+	<!-- Load vendor scripts. -->
+	<script type="text/javascript" src="./vendor/angular-1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="./vendor/firebase-2.3.2/firebase.min.js"></script>
+	<script type="text/javascript" src="./vendor/lodash-1.8.3/lodash.min.js"></script>
+
+	<!-- Load application scripts. -->
+	<script type="text/javascript" src="./app/main.js"></script>
+
+	<!-- Load services. -->
+	<script type="text/javascript" src="./app/services/deployments.service.js"></script>
+	<script type="text/javascript" src="./app/services/firebase.service.js"></script>
+	<script type="text/javascript" src="./app/services/lodash.service.js"></script>
+	
+	<!-- Layouts. -->
+	<script type="text/javascript" src="./app/layout/main.controller.js"></script>
+
+	<!-- Intake component. -->
+	<script type="text/javascript" src="./app/intake/intake.controller.js"></script>
+	<script type="text/javascript" src="./app/intake/intake.directive.js"></script>
+
+	<!-- Checklist component. -->
+	<script type="text/javascript" src="./app/checklist/checklist.controller.js"></script>
+	<script type="text/javascript" src="./app/checklist/checklist.directive.js"></script>
+
+</body>
+</html>
